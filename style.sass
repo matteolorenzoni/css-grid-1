@@ -1,0 +1,99 @@
+:root
+  --color-primary: #fc307b
+  --color-secondary: #2c92ef
+  --gap: 1rem
+  --fs-400: 1.125rem
+  --fs-700: 3.5rem
+    
+@import "./preset"
+
+body
+  font-size: var(--fs-400)
+  color: white
+  background: black
+  padding: 20vh 0
+  font-family: sans-serif
+
+.fs-700
+  font-size: var(--fs-700)
+  line-height: 1
+
+.text-primary
+  color: var(--color-primary)
+  
+.text-accent
+  color: var(--color-secondary)
+
+.bg-primary
+  background-color: var(--color-primary)
+
+.bg-secondary
+  background-color: var(--color-secondary)
+
+.uppercase
+  text-transform: uppercase
+
+.container
+  min-width: 40rem
+  max-width: 75rem
+  margin: 0 auto
+
+.flex
+  display: flex
+  gap: var(--gap)
+
+.grid
+  display: grid
+  gap: var(--gap)
+
+.grid--columns
+  grid-auto-columns: 1fr
+  grid-auto-flow: column
+
+
+/* FEATURED GRID */
+.feature-grid-container
+  position: relative
+  perspective: 100rem
+
+.feature-grid-text
+  padding: 2rem
+  background: linear-gradient(90deg, hsl(255 50% 0% / 1) 75%, hsl(255 50% 50% / 0))
+
+.feature-grid
+  position: relative
+  z-index: -1
+  left: min(calc(1000px - 100vw) * -1, 0px)
+  width: 45rem
+  align-self: center
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: repeat(6, 1fr)
+  transform: rotateY(-30deg)
+  transform-origin: left
+  & > :nth-child(1),
+  & > :nth-child(4),
+  & > :nth-child(5),
+  & > :nth-child(7)
+    grid-row: span 3
+  & > :nth-child(2),
+  & > :nth-child(3)
+    grid-row: span 2
+  & > :nth-child(6)
+    grid-column: 2 / span 2
+    grid-row: 3 / span 4
+
+.feature-grid
+  & > a
+    align-self: baseline
+    & > img
+      border-radius: 0.75rem
+      overflow: hidden
+      transition: transform 0.2s ease-in-out
+    & > img:hover,
+    & > img:focus-visible
+      transform: scale(1.1)
+      box-shadow: 0 0 1.5rem hsl(0 0% 100% / 0.8)
+    
+  
+
+    
