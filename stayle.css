@@ -101,17 +101,6 @@ body {
   color: var(--color-secondary);
 }
 
-.btn {
-  height: 2.5rem;
-  width: 10rem;
-  border-radius: 0.5rem;
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .btn--primary {
   background: var(--color-primary);
 }
@@ -190,4 +179,4 @@ body {
   box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.8);
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=stayle.css.map */
